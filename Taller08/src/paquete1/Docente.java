@@ -2,11 +2,11 @@ package paquete1;
 
 public class Docente {
 
-    private String nombre;
-    private String cedula;
+    String nombres;
+    String cedula;
 
     public void establecerNombre(String n) {
-      nombre = n;
+      nombres = n;
     }
 
     public void establecerCedula(String c) {
@@ -14,7 +14,7 @@ public class Docente {
     }
 
     public String obtenerNombre() {
-        return nombre;
+        return nombres;
     }
 
     public String obtenerCedula() {

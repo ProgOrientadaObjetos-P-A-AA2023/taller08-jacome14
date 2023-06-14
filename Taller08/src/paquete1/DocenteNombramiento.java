@@ -7,7 +7,7 @@ public class DocenteNombramiento extends Docente {
     
     private double valorSueldo;
     private double valorHora;
-    private double numeroH;
+    private int numeroH;
     private double Salario;
     
 
@@ -20,13 +20,13 @@ public class DocenteNombramiento extends Docente {
         valorHora = valorH;
     }
 
-    public void establecerNumeroH(double numeroH) {
+    public void establecerNumeroH(int  numeroH) {
         numeroH = numeroH;
     }
 
     public void calcularSalario() {
         
-        Salario =(valorSueldo*(numeroH*valorHora));
+        Salario =(valorSueldo+(numeroH*valorHora));
     }
     
     
@@ -48,17 +48,21 @@ public class DocenteNombramiento extends Docente {
     }
     
    @Override
-    public String toString(){
-        String reporte = String.format("Nombres: %s\nCédula: %s\nValor del "
-                + "Sueldo: $%.2f\nValor de las Horas Extra: $%.2f\nNúmero de "
-                + "Horas Extra: %d\nSueldo: $%.2f",
-                obtenerNombre(),
-                obtenerCedula(),
-                obtenerValorSueldo(),
-                obtenerValorHora(),
-                obtenerNumeroH(),
-                obtenerSalario());
-        
+      
+    public String toString() {
+        String reporte = String.format("Nombre: %s\n"
+                + "Cédula: %s\n"
+                + "Valor del Sueldo: %.2f\n"
+                + "Valor Hora Extra: %.2f\n"
+                + "Número de Horas Extra: %d\n"
+                + "Sueldo Total: %.2f",
+                nombres,
+                cedula,
+                valorSueldo,
+                valorHora,
+                numeroH,
+                Salario);
+
         return reporte;
     }
     

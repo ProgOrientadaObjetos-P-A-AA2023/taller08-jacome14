@@ -4,10 +4,6 @@ import java.util.Locale;
 import java.util.Scanner;
 import paquete1.*;
 
-/**
- *
- * @author reroes
- */
 public class Ejecutor {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -16,7 +12,7 @@ public class Ejecutor {
         boolean condicion = true;
         while(condicion) {
             System.out.println("Ingrese los nombres del docente:");
-            String nombre = entrada.nextLine();
+            String nombres = entrada.nextLine();
             System.out.println("Ingrese la cédula del docente:");
             String cedula = entrada.nextLine();
         
@@ -42,7 +38,7 @@ public class Ejecutor {
                     
                     DocenteNombramiento docenteN = new DocenteNombramiento();
 
-                    docenteN.establecerNombre(nombre);
+                    docenteN.establecerNombre(nombres);
                     docenteN.establecerCedula(cedula);
                     docenteN.establecerValorSueldo(sueldo);
                     docenteN.establecerValorHora(valorHoras);
@@ -61,7 +57,7 @@ public class Ejecutor {
                     
                     DocenteFactura docenteF = new DocenteFactura();
 
-                    docenteF.establecerNombre(nombre);
+                    docenteF.establecerNombre(nombres);
                     docenteF.establecerCedula(cedula);
                     docenteF.establecerValorFactura(factura);
                     docenteF.establecerValorIvaDescuento(ivaDescuento);
